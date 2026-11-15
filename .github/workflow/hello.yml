@@ -1,0 +1,23 @@
+# Workflow
+# should have name 
+name: Hello
+
+on:
+  work_dispatch:
+
+# Jobs tells what the workflow should do, there can be one or more than one jobs,hence we write Jobs
+# Jobs is an object to needs indentation 
+#should be inside the workflow
+jobs:
+  say-hello:
+      # creates an Ephermal Container with Ubantu running
+      run-on: ubantu-latest
+      # That emphermal will have steps to execute, hence name those steps and use run: run has the command   
+      steps:
+      - name: say hello to new everyone
+        run:  echo "Hello World" 
+# Steps
+#should be inside the jobs
+
+# Actions
+#should be inside the steps
