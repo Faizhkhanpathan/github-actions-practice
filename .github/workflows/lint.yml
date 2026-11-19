@@ -1,0 +1,17 @@
+# Goal: Whenever someone changes Python code,
+# the linter checks syntax, formatting, and indentation.
+
+name: Auto Linter
+
+on:
+  push:
+    paths: "*.py"
+
+
+jobs:
+  code:
+  # this step will automatically clone of the current branch into the runner  
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout/Clone the code
+        uses: actions/checkout@v4
